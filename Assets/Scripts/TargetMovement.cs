@@ -15,6 +15,7 @@ public class TargetMovement : MonoBehaviour
     {
         initPosition = transform.position;
         GameObject followGO = new GameObject();
+        followGO.name = gameObject.name + "_SmoothFollowGuide";
         followTransform = followGO.transform;
         followTransform.position = initPosition;
         StartCoroutine(MoveTarget());
